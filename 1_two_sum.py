@@ -9,25 +9,25 @@
 # return [0, 1].
 
 class Solution(object):
-		def twoSum(self, nums, target):
-			"""
-			:type nums: List[int]
-			:type target: int
-			:rtype: List[int]
-			"""
-			num_to_index = {
-			# 2:0
-			# 7:1
-			# ...
-			}
+	def twoSum(self, nums, target):
+		"""
+		:type nums: List[int]
+		:type target: int
+		:rtype: List[int]
+		"""
+		num_to_index = {
+		# 2:0
+		# 7:1
+		# ...
+		}
 
-			for i, num in enumerate(nums):
-				diff = target - num
+		for i, num in enumerate(nums):
+			diff = target - num
 
-				if diff in num_to_index:
-					return [num_to_index[diff], i]
-				else:
-					num_to_index[num] = i
+			if diff in num_to_index:
+				return [num_to_index[diff], i]
+			else:
+				num_to_index[num] = i
 
 if __name__ == '__main__':
 	print(Solution().twoSum((2, 7, 11, 15), 9))
